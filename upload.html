@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Upload - Creative Touch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">CT</div>
+      <div>
+        <div style="font-weight:800">Creative Touch</div>
+        <div style="font-size:.85rem;color:var(--muted)">Upload Artwork</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="./index.html">Home</a>
+    </nav>
+  </header>
+
+  <main style="padding:2rem;text-align:center">
+    <h2>Upload Images</h2>
+    <input type="file" id="fileInput" accept="image/*" multiple>
+    <div id="preview" class="gallery"></div>
+    <button id="saveBtn" class="btn">Save to Gallery</button>
+  </main>
+
+  <script>
+  const fileInput = document.getElementById('fileInput');
+  const preview = document.getElementById('preview');
+  const STORAGE_KEY = 'creative_touch_images_v1';
+
+  let uploadedImages = []; // will hold objects {id, dataUrl, name}
+
+  function generateId() {
+    return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  }
+
+  fileInput.addEventListener('change', () => {
+    preview.innerHTML = '';
+    uploadedImages = [];
+    [...fileInput.files].forEach(file => {
+      if (!file.type.startsWith('image/')) return;
+      const reader = new FileReader();
+      reader.onload = e => {
+        const obj = {
+          id: generateId(),
+          dataUrl: e.target.result,
+          name: file.name
+        };
+        uploadedImages.push(obj);
+
+        // Show preview
+        const img = document.createElement('img');
+        img.src = obj.dataUrl;
+        img.style.width = "200px";
+        img.style.margin = "10px";
+        preview.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    });
+  });
+
+  document.getElementById('saveBtn').addEventListener('click', () => {
+    if (uploadedImages.length > 0) {
+      // Merge with existing images in storage
+      const existing = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+      const all = existing.concat(uploadedImages);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(all));
+      alert("Images saved! Go back to Home Gallery.");
+    } else {
+      alert("Please upload some images first.");
+    }
+  });
+</script>
+
+</body>
+</html>

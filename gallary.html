@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>For Creative Touch</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <div class="logo">CT</div>
+            <div>
+                <div style="font-weight:800">Creative Touch</div>
+                <div style="font-size:.85rem;color:var(--muted)">Realistic · Abstract · Graffiti</div>
+            </div>
+        </div>
+
+        <button class="menu-btn" id="menuBtn" aria-controls="mainNav" aria-expanded="false"
+            aria-label="Toggle navigation">☰</button>
+
+        <nav class="nav" id="mainNav">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+    </header>
+
+       <!-- Breadcrumb Area Start -->
+    <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(./images/banner1.png);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content text-center">
+                        <h2 class="page-title">Gallary</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i> Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Gallary</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Area End -->
+
+
+<!-- Portfolio -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+
+    <!-- Category filters -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="art">Realistic</button>
+      <button class="filter-btn" data-filter="photography">Abstract</button>
+      <button class="filter-btn" data-filter="design">Graffiti</button>
+    </div>
+
+    <!-- Gallery grid -->
+    <div class="gallery">
+      <div class="card" data-category="art">
+        <img src="./images/ig 2.jpeg" alt="Artwork 1">
+      </div>
+      <div class="card" data-category="art">
+        <img src="./images/ig 11.jpeg" alt="Artwork 1">
+      </div>
+      <div class="card" data-category="art">
+        <img src="./images/ig 7.jpeg" alt="Artwork 1">
+      </div>
+      <div class="card" data-category="photography">
+        <img src="./images/ig 3.jpeg" alt="Photography 1">
+      </div>
+      <div class="card" data-category="photography">
+        <img src="./images/ig 9.jpeg" alt="Photography 1">
+      </div>
+      <div class="card" data-category="photography">
+        <img src="./images/ig 1.jpeg" alt="Photography 1">
+      </div>
+      <div class="card" data-category="design">
+        <img src="./images/ig 4.jpeg" alt="Design 1">
+      </div>
+      <div class="card" data-category="design">
+        <img src="./images/ig 8.jpeg" alt="Design 1">
+      </div>
+      <div class="card" data-category="design">
+        <img src="./images/ig 14.jpg" alt="Design 1">
+      </div>
+      <div class="card" data-category="design">
+        <img src="./images/ig 15.jpg" alt="Design 1">
+      </div>
+      <div class="card" data-category="design">
+        <img src="./images/ig 13.jpeg" alt="Design 1">
+      </div>
+      <div class="card" data-category="design">
+        <img src="./images/ig 10.jpeg" alt="Design 1">
+      </div>
+      <div class="card" data-category="photography">
+        <img src="./images/ig 5.jpeg" alt="Photography 2">
+      </div>
+      <div class="card" data-category="art">
+        <img src="./images/ig 6.jpeg" alt="Artwork 2">
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lb-close" id="lbClose">&times;</span>
+    <img id="lbImg" src="" alt="">
+  </div>
+
+    <footer>
+        &copy; 2025 Creative Touch
+    </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

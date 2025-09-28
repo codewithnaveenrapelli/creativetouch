@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Creative Touch</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <div class="logo">CT</div>
+      <div>
+        <div style="font-weight:800">Creative Touch</div>
+        <div style="font-size:.85rem;color:var(--muted)">Realistic · Abstract · Graffiti</div>
+      </div>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    <nav class="nav" id="mainNav">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <section class="breadcrumb-area" style="background-image:url(./images/contact\ img.jpg);">
+    <div class="breadcrumb-content text-center">
+      <h2 class="page-title">Contact Us</h2>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Contact</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-area">
+    <div class="container">
+      <div class="section-heading text-center">
+        <h1>Get in Touch</h1>
+        <p class="small">We’d love to hear from you! Fill out the form or reach us directly.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h2>Contact Details</h2>
+          <p><strong>Email:</strong> creativetouch@gmail.com</p>
+          <p><strong>Phone:</strong> +1 234 567 890</p>
+          <p><strong>Address:</strong> 123 Art Street, Creative City</p>
+        </div>
+
+        <!-- Contact Form -->
+<!-- Thank You Banner (above form) -->
+<div id="thankYouMsg" class="thank-you-banner" style="display:none;">
+  🎉 Thank you! Your message has been sent.
+</div>
+
+<form id="contactForm"
+  action="https://formspree.io/f/xkgqwbvk"
+  method="POST"
+>
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit" class="btn">Send Message</button>
+</form>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Creative Touch
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
