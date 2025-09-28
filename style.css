@@ -103,7 +103,9 @@ footer {
     padding: 1rem;
     text-align: center;
     color: var(--muted);
-    font-size: .9rem
+    font-size: 2rem;
+    background: black;
+    color: white;
 }
 
 /* === Welcome / Carousel === */
@@ -364,8 +366,14 @@ footer {
   padding: 10px 24px;
   border-radius: 6px;
   text-decoration: none;
+  color: white;
+  margin-top: 10px;
 }
 
+.about-us-content .btn:hover {
+  background: rgb(228, 11, 11);
+  color: rgb(0, 0, 0);
+}
 
 
 
